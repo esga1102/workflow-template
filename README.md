@@ -15,6 +15,7 @@ Mỗi nghiệp vụ sẽ được chia làm 3 dạng cơ bản nhất, nó bao g
 
 ## sample 
 Ví dụ cho nghiệp vụ tạo 1 tài khoản
+```sh
     @Component
     @AllArgsConstructor
     public class CreateNewAccountScenario {
@@ -33,12 +34,13 @@ Ví dụ cho nghiệp vụ tạo 1 tài khoản
       return context.dataModel.getExtra(AccountResponse.class.getSimpleName(), AccountResponse.class);
       }
     }
-    
+```
 # Tree workflow : 
     Tree workflow (luồng công việc cây) là một loại workflow trong đó các hoạt động được tổ chức thành một cấu trúc cây, với các nhánh và nút lá.
     Mỗi nút trong cây đại diện cho một hoạt động cụ thể trong quy trình, và các nhánh chỉ ra các mối quan hệ và trình tự giữa các hoạt động.
     Tree workflow thường được sử dụng trong các quy trình phức tạp hơn.
     Nó cung cấp một cấu trúc linh hoạt và dễ dàng mở rộng để quản lý các quy trình phức tạp và đảm bảo sự theo dõi và kiểm soát hiệu quả.
+```sh
 Dưới đây là một cấu trúc BPMN 
     +-------------------+
     |  Nhận yêu cầu     |
@@ -72,8 +74,9 @@ Dưới đây là một cấu trúc BPMN
     |dự án   |   |triển   |
     |        |   |sản phẩm|
     +--------+   +--------+
-
+```
 ## sample 
+```sh
 Ví dụ về nghiệp vụ duyệt tài khoản
 @Component
 @AllArgsConstructor
@@ -113,6 +116,7 @@ public class ApproveScenario {
         AccountResponse.class);
   }
 }
+```
 # Parallel workflow :
 Luồng công việc parallel (hay còn gọi là luồng công việc song song) là một loại luồng công việc trong quy trình kinh doanh mà các hoạt động được thực hiện đồng thời và độc lập với nhau.
 Trong luồng công việc parallel, các hoạt động có thể được thực hiện đồng thời mà không cần chờ đợi hoàn thành của nhau. Điều này cho phép quy trình thực hiện nhiều công việc cùng một lúc,
